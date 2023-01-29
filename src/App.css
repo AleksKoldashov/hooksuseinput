@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+.App.dark{
+  background-color: #61dafb;
+}
+.App.ligth{
+  background-color: aliceblue;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
