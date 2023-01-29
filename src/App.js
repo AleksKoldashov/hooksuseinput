@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import useInput from './hooks/useInput'
 
 function App() {
+ const inp = useInput('Hello World', true)  
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form>
+        <input 
+        {...inp}
+        />
+        {inp.error && <span style={{ color: 'red'}}>{inp.error}</span>}
+      </form>
     </div>
   );
 }
